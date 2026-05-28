@@ -181,7 +181,7 @@ Click the ⚙️ icon in the popup to access settings:
 - Try a different language setting
 - Ensure you're speaking clearly and at normal volume
 
-## Future Features (Roadmap)
+## Possible Future Features
 
 - [ ] OpenAI Whisper API fallback for improved accuracy
 - [ ] Support for 50+ languages
