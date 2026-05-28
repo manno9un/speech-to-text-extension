@@ -1,0 +1,188 @@
+:root {
+  --bg: #0f1419;
+  --surface: #1a212b;
+  --surface-2: #232c38;
+  --border: #2d3845;
+  --text: #e6edf3;
+  --text-dim: #8b97a5;
+  --accent: #f0883e;
+  --accent-dim: #b8642b;
+  --success: #3fb950;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.options__card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.options__header {
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.options__title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.options__subtitle {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.options__section {
+  padding: 12px 28px;
+}
+
+.options__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.options__row:last-child {
+  border-bottom: none;
+}
+
+.options__row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.options__label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.options__desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.options__select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.options__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.options__footer-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.options__saved {
+  font-size: 13px;
+  color: var(--success);
+}
+
+.options__btn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.options__btn:active {
+  transform: translateY(1px);
+}
+
+.options__btn--primary {
+  background: var(--accent);
+  color: #1a1207;
+}
+
+.options__btn--primary:hover {
+  background: #f59a57;
+}
+
+.options__btn--ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-dim);
+}
+
+.options__btn--ghost:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+.toggle {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  border: none;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.toggle--on {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.toggle__knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+.toggle--on .toggle__knob {
+  transform: translateX(18px);
+}
