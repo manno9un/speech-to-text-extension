@@ -145,7 +145,7 @@ The extension is loaded manually as an "unpacked" extension. There are two ways 
 ### Option B — Clone with Git
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/speech-to-text-extension.git
+git clone https://github.com/manno9un/speech-to-text-extension.git
 cd speech-to-text-extension
 ```
 
